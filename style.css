@@ -1,0 +1,222 @@
+body {
+	background: #f0f0f0;
+	/* background: linear-gradient(to right, rgb(247 247 247), rgb(232 232 232)); */
+	color: white;
+	margin: 0;
+	font-family: rubik;
+}
+header {
+    border: 1px solid #fa6555;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    background: #fa6555;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+footer {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #fa6555;
+    background: #fa6555;
+}
+.container {
+	padding: 150px 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+span.id-pokemon {
+    position: absolute;
+    float: left;
+    top: -210px;
+    left: 85%;
+    font-weight: 500;
+    font-size: 35px;
+    color: #f9f9f98a;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+}
+
+.card::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: .7;
+    position: absolute;
+    top: 13%;
+    left: 30%;
+}
+
+.fire.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.water.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ice.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.bug.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ghost.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.electric.card::after {
+	background-image: url(pokeball.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.steel {
+	background-color: #f4f4f4;
+}
+
+.fire {
+	background-color: #f7786b;
+}
+
+
+.grass {
+	background-color:  #2cdab1;
+}
+
+.electric {
+	background-color: #ffe73d;
+}
+
+.water, .ice {
+	background-color: #58abf6;
+}
+
+.ground {
+	background-color: #f4e7da;
+}
+
+.rock {
+	background-color: #d5d5d4;
+}
+
+.fairy {
+	background-color: #fceaff;
+}
+
+.poison {
+	background-color: #98d7a5;
+}
+
+.bug {
+	background-color: #ffce4b;
+}
+
+.dragon {
+	background-color: #97b3e6;
+}
+
+.psychic {
+	background-color: #eaeda1;
+}
+
+.flying {
+	background-color: #F5F5F5;
+}
+
+.fighting {
+	background-color: #E6E0D4;
+}
+.normal {
+	background-color: #52959cb3;
+}
+.ghost {
+	background-color: #9f5bba;
+}
+
+.type-name {
+    margin: 5px;
+    padding: 0.35em;
+    border-radius: 12px;
+    background: #bff4e766;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: bolder;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+	margin: 0 0 10px;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
+}
